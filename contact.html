@@ -117,32 +117,56 @@
                 <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Contact Us</h1>
+                            <h1>Get in Touch with Us</h1>
                         </div>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form>
+                        <p>
+                            At <strong>Shaydri Constructions and Developers</strong>, we're dedicated to helping you realize your vision. 
+                             Whether you have questions about our services, need expert advice on your next project, or want to discuss a specific requirement, our team is here to assist you.
+                        </p>
+                        <p>
+                            Reach out through the contact form below, and one of our experts will respond promptly. 
+                            We look forward to partnering with you to create spaces that inspire and fulfill.
+                        </p>
+    
+                        <h3>Our Services Include:</h3>
+                        <ul>
+                        <li>Real Estate Development</li>
+                        <li>Material Contracting</li>
+                        <li>2D Planning & 3D Elevations</li>
+                        <li>Architectural Services</li>
+                        <li>Building Material Supply</li>
+                        <li>Interior Design</li>
+                        <li>Soil Testing</li>
+                        </ul>
+
+                        <p>
+                            Let us bring our expertise to your next project—simply fill out the form, and let’s get started!
+                        </p>
+
+                        <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Contact Number" required>
+                                        <label for="phone">Contact Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
@@ -151,12 +175,14 @@
                                 </div>
                             </div>
                         </form>
+                        <div id="successMessage"></div>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
                         <iframe class="position-absolute w-100 h-100" style="object-fit: cover;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3894.8745496157094!2d76.8951875101951!3d12.524468787700236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bafa100368cd609%3A0xda5dcc6df4d1c370!2sSahyadri%20Constructions%20and%20Developers!5e0!3m2!1sen!2sin!4v1731599979457!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
                         frameborder="0" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
                     </div>
@@ -164,24 +190,34 @@
             </div>
         </div>
     </div>
-    <!-- Contact End -->
-    <form action="https://script.google.com/macros/s/AKfycbxEB2jDc0kuuhoAqOzpU8IzryL8-FSpi8Pi7ogee747IgEP_BdsxyXZpXmuldNAUQTN/exec" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
-        
-        <button type="submit">Submit</button>
-    </form>
-    
 
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting the default way
+    
+            // Create a FormData object to capture form data
+            const formData = new FormData(this);
+    
+            // Send the form data using fetch() to your Google Apps Script URL
+            fetch("https://script.google.com/macros/s/AKfycbztorBvotiTNMV6Lm5WYCR90sIlCTxyHsb4duktXmi4Ep8JkNTuyn6YOCZp9dLdWZJK/exec", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // Display a success message without redirecting
+                document.getElementById("successMessage").innerText = "Thank you! Your submission has been received.";
+                // Optionally, reset the form fields
+                document.getElementById("contactForm").reset();
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                document.getElementById("successMessage").innerText = "There was an error submitting the form. Please try again.";
+            });
+        });
+    </script>
+        
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">

@@ -138,10 +138,16 @@
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <div class="form-floating">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
+                                    <label for="name">Your Name</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <div class="form-floating">
+                                    <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" style="height: 55px;" required> 
+                                    <label for="email">Your Email</label>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">

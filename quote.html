@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,61 +133,60 @@
                             <h1 class="display-5 mb-4">Free Quote</h1>
                         </div>
                         <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <form>
+                        
+                        <form action="https://script.google.com/macros/s/AKfycbwzMUe78uAWWkOkWQTVXgM_9MJC6ElmoLbLx-5NyV0R_18eR4zmqsp_aqtVy6aXbVQ53g/exec" method="POST"> <!-- Replace YOUR_WEB_APP_URL with your Apps Script Web App URL -->
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <div class="form-floating">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
-                                    <label for="name">Your Name</label>
+                                        <input type="text" class="form-control border-0" id="name" name="name" placeholder="Your Name" style="height: 55px;" required>
+                                        <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="form-floating">
-                                    <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" style="height: 55px;" required> 
-                                    <label for="email">Your Email</label>
+                                        <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" style="height: 55px;" required>
+                                        <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="form-floating">
-                                    <input type="tel" class="form-control border-0" id="phone" name="phone" placeholder="Your Contact Number" style="height: 55px;" required>
-                                    <label for="phone">Your Contact Number</label>
+                                        <input type="tel" class="form-control border-0" id="phone" name="phone" placeholder="Your Contact Number" style="height: 55px;" required>
+                                        <label for="phone">Your Contact Number</label>
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    
-                                    <select class="form-select" style="height: 55px;" required>
+                                    <select class="form-select" id="service" name="service" style="height: 55px;" required>
                                         <option selected>Select A Service</option>
-                                        <option value="1"> Real Estate Developer</option>
-                                        <option value="2"> Material Contractor</option>
-                                        <option value="3"> 2D plan and 3D Elevations
-                                        </option>
-                                        <option value="4"> Architecture
-                                        </option>
-                                        <option value="5"> Building Material Supply
-                                        </option>
-                                        <option value="6"> Interior Design
-                                        </option>
-                                        <option value="7"> Soil Testing
-                                        </option>
+                                        <option value="Real Estate Developer">Real Estate Developer</option>
+                                        <option value="Material Contractor">Material Contractor</option>
+                                        <option value="2D Plan and 3D Elevations">2D Plan and 3D Elevations</option>
+                                        <option value="Architecture">Architecture</option>
+                                        <option value="Building Material Supply">Building Material Supply</option>
+                                        <option value="Interior Design">Interior Design</option>
+                                        <option value="Soil Testing">Soil Testing</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                    <textarea class="form-control border-0" id="message" name="message" placeholder="Special Note"></textarea>
-                                    <label for="message">Special Note</label>
+                                        <textarea class="form-control border-0" id="message" name="message" placeholder="Special Note" style="height: 120px;"></textarea>
+                                        <label for="message">Special Note</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
                                 </div>
                             </div>
-                        </form>
+                        </form>                        
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Quote End -->
+
+
+    
         
 
     <!-- Footer Start -->
